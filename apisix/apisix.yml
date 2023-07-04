@@ -1,0 +1,19 @@
+# Create an upstream to register our Conference API backend for APISIX
+upstreams:
+  - id: 1
+    name: "Conferences API upstream"
+    desc: "Register Conferences API as the upstream"
+    # Conference API requires URL scheme HTTPS for the connection
+    scheme: https
+    # Use the original host when the request is forwarded to the upstream.
+    pass_host: node
+    nodes:
+      "conferenceapi.azurewebsites.net:443": 1
+routes:
+  - uris: ["/speaker/*/topics","/speaker/*/sessions"]
+    name: "Conferences API speaker's sessions details"
+    desc: "Route in APISIX for the Conferences API speaker sessions and topics"  
+    methods: ["GET"]
+    # Route every HTTP GET request to the Conference API
+    upstream_id: 1   
+#END
