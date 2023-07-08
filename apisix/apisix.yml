@@ -15,5 +15,5 @@ routes:
     desc: "Route in APISIX for the Conferences API speaker sessions and topics"  
     methods: ["GET"]
     # Route every HTTP GET request to the Conference API
-    upstream_id: 1   
+    upstream_id: 1
 #END

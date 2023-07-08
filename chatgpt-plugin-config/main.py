@@ -31,6 +31,7 @@ def serve_openapi_yaml():
 def serve_openapi_json():
     return send_from_directory(os.path.dirname(__file__), 'logo.png')
 
+# This method you need only if you are running plugin locally
 @app.route('/<path:path>', methods=['GET', 'POST'])
 def wrapper(path):
 
