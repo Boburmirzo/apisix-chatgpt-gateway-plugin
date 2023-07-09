@@ -10,7 +10,7 @@ upstreams:
     nodes:
       "conferenceapi.azurewebsites.net:443": 1
 routes:
-  - uris: ["/speaker/*/topics","/speaker/*/sessions"]
+  - uris: ["/speaker/*"]
     name: "Conferences API speaker's sessions details"
     desc: "Route in APISIX for the Conferences API speaker sessions and topics"  
     methods: ["GET"]
