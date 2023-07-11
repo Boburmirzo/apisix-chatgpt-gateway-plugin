@@ -1,4 +1,4 @@
-# API Gateway between ChatGPT custom plugin and backend APis
+# API Gateway between ChatGPT custom plugin and backend APIs
 
 API Gateway can be helpful for ChatGPT plugin developers to expose, secure, manage, and monitor their API endpoints. 
 This repo demonstrates how to use [Apache APISIX](https://apisix.apache.org/) API Gateway as a front door for communication between ChatGPT custom plugins
